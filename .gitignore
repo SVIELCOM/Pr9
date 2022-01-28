@@ -4,4 +4,4 @@ terraform.tfstate
 terraform.tfstate.backup
 *keys/
 inventory
-jenkins-cli.jar
+

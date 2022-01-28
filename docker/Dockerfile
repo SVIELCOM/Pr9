@@ -18,6 +18,8 @@ RUN apk update --no-cache && \
     apk add build-base postgresql-dev libpq --no-cache --virtual .build-deps && \
     pip3 install --upgrade --no-cache-dir psycopg2-binary flask configparser && \
     apk del .build-deps
-RUN apk add postgresql-libs libpq --no-cache
-ENTRYPOINT [ "/bin/sh" ]
-EXPOSE 80
+RUN apk add postgresql-libs libpq --no-cache && mkdir -p /srv/app/conf
+COPY web.conf  /srv/app/conf/
+
+CMD python /srv/app/web.py
+EXPOSE 5000
