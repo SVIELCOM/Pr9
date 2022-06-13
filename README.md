@@ -17,3 +17,8 @@
 web.py расположить в /srv/app/;
 web.conf расположить в /srv/app/conf/.
 Затем запустить Docker-контейнер, смонтировав /srv/app с хостовой ФС в контейнерную, а также пробросив порт 80 из контейнера в хостовую сеть.
+
+
+Размер полученного образа:
+REPOSITORY TAG IMAGE ID CREATED SIZE
+webappimage latest bd17e507ee79 6 minutes ago 63.8MB
